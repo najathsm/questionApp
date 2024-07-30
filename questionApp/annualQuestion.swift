@@ -11,26 +11,29 @@ struct annualQuestion: View {
     @State private var result = ""
     var body: some View {
         NavigationStack{
-            VStack{
+            VStack(spacing: 30){
                 Text("Which plant is an annual in NYC?")
+                    .font(.title2)
+                Text("Hint: Annual plants are plants that grow for only one year.")
+                    .font(.footnote)
                 
                 
                 Button("Phlox") {
-                    result = "Correct!"
+                    result = "Hmm. Try again. Phlox lives for longer than a year."
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(.blue)
                 .fontWeight(.bold)
                 
                 Button("Violet") {
-                    result = "Not quite."
+                    result = "Not quite. Violets return years after they are grown."
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(.purple)
                 .fontWeight(.bold)
                 
-                Button("Cosmos") {
-                    result = "Correct!"
+                Button("Cosmo") {
+                    result = "Correct! Cosmos complete their growing cycle in one year."
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(.pink)
@@ -40,8 +43,6 @@ struct annualQuestion: View {
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     .multilineTextAlignment(.center)
                 
-                Spacer()
-                      .frame(height: 100)
                 
                 NavigationLink(destination: weedQuestion()) {
                     Text("Next Gardening Trivia!")
