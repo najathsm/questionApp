@@ -33,7 +33,7 @@ struct ContentView: View {
 
     
                 Button("Black-eyed Susans") {
-                    result = "Correct!"
+                    result = "Correct! Black-eyed Susans return every year."
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(.yellow)
